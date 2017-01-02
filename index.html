@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>jsutils</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>JS Utils - Javascript工具集</title>
+</head>
+<body>
+	<div id="app-header"></div>
+
+	<div id="app">
+		<p>{{ message }}</p>
+		<textarea cols="75" rows="30" v-model="code" v-on:keyup="jsonParser" placeholder="请将JSON数据粘贴在此处"></textarea>
+		<textarea cols="75" rows="30" v-model="result" placeholder="格式化的JSON数据"></textarea>
+	</div>
+
+	<div id="app-footer"></div>
+
+	<style type="text/css">
+		body {
+			font-family: "微软雅黑", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "宋体";
+		}
+
+		#app {
+			margin: 75px;
+			font-size: 1.2em;
+		}
+
+		textarea {
+			margin: 10px;
+		}
+	</style>
+</body>
 </html>

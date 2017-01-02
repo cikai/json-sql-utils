@@ -1,11 +1,33 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
+import AppHeader from './components/Header'
+import AppFooter from './components/Footer'
 
-/* eslint-disable no-new */
+/* init header */
 new Vue({
+  el: '#app-header',
+  template: '<AppHeader/>',
+  components: { AppHeader }
+})
+
+/* init footer */
+new Vue({
+  el: '#app-footer',
+  template: '<AppFooter/>',
+  components: { AppFooter }
+})
+
+/* init app */
+var app = new Vue({
   el: '#app',
-  template: '<App/>',
-  components: { App }
+  data: {
+    message: 'Json格式化',
+    code: '',
+    result: ''
+  },
+  methods: {
+  	jsonParser: function() {
+  		// 缺少Json格式数据校验 2017/1/2
+  		this.result = JSON.stringify(JSON.parse(this.code), null, 4);
+  	}
+  }
 })
