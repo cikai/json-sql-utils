@@ -26,8 +26,9 @@ var app = new Vue({
   },
   methods: {
   	jsonParser: function() {
+      let code = JSON.parse(this.code);
   		// 缺少Json格式数据校验 2017/1/2
-  		this.result = JSON.stringify(JSON.parse(this.code), null, 4);
+  		this.result = JSON.stringify(code, null, 4);
   	}
   }
 })
