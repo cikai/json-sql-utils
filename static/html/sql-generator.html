@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>SQL Generator</title>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/sql-generator.css">
+  <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+  <script>
+    var parms = 'sql.append(" ? ");';
+    function submit() {
+      var str = $("#codeAextarea").val().split("\n");
+      var resultStr = "StringBuilder sql = new StringBuilder();"+ "\n";
+      $.each( str, function(index, value){        
+        var trimV = value.replace(/(^\s*)|(\s*$)/g, "");
+        resultStr += parms.replace("?", trimV) + "\n";
+      });
+      $("#resultAextarea").val(resultStr);
+    }
+  </script>
+
+  <div>
+    <div id="butt">
+      <input type="button" onclick="submit()" value="SQL 生成">
+    </div>
+    <div id="CodeArea">
+      <h2>编辑您的代码：</h2>
+      <textarea wrap="logical" id="codeAextarea"></textarea>
+    </div>
+    <div id="result">
+      <h2>查看结果:</h2>
+      <textarea wrap="logical" id="resultAextarea"></textarea>
+    </div>
+  </div>
+</body>

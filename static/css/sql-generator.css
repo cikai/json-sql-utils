@@ -1,0 +1,67 @@
+* {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+div#butt {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #c5c5c5;
+    height: 50px;
+}
+
+div#butt input {
+    background: red none repeat scroll 0 0;
+    color: #fff;
+    font: 14px Verdana,Arial,Helvetica,sans-serif;
+    height: 30px;
+    margin: 10px 0 0 10px;
+    width: 150px;
+}
+
+div#CodeArea {
+    float: left;
+    height: 435px;
+    margin-left: 5px;
+    width: 50%;
+}
+
+#CodeArea h2 {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0 6px 5px;
+}
+
+#CodeArea textarea,
+#resultAextarea {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #c5c5c5 -moz-use-text-color #c5c5c5 #c5c5c5;
+    border-image: none;
+    border-style: solid solid  solid solid;
+    border-width: 1px 0 1px 1px;
+    font: 14px "Courier New",Courier,monospace;
+    height: 400px;
+    overflow: auto;
+    width: 100%;
+}
+
+div#result {
+    float: left;
+    height: 435px;
+    width: 49%;
+}
+
+#result h2 {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0 6px 5px;
+}
+
+#result iframe {
+    border: 1px solid #c5c5c5;
+    height: 400px;
+    width: 100%;
+}
