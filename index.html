@@ -7,10 +7,18 @@
 <body>
 	<div id="app-header"></div>
 
-	<div id="app">
-		<p>{{ message }}</p>
-		<textarea cols="75" rows="30" v-model="code" v-on:keyup="jsonParser" placeholder="请将JSON数据粘贴在此处"></textarea>
-		<textarea cols="75" rows="30" v-model="result" placeholder="格式化的JSON数据"></textarea>
+	<div id="json" class="app">
+		<p>{{ json_message }}</p>
+		<textarea cols="75" rows="30" v-model="code" v-on:keyup="jsonFormatter" placeholder="压缩的JSON数据"></textarea>
+		<span>< - ></span>
+		<textarea cols="75" rows="30" v-model="result" v-on:keyup="jsonCompress" placeholder="格式化的JSON数据"></textarea>
+	</div>
+
+	<div id="uri" class="app">
+		<p>{{ uri_message }}</p>
+		<textarea cols="75" rows="30" v-model="code" v-on:keyup="decodeUri" placeholder="未解码的uri"></textarea>
+		<span>< - ></span>
+		<textarea cols="75" rows="30" v-model="result" v-on:keyup="encodeUri" placeholder="解码后的uri"></textarea>
 	</div>
 
 	<div class="link">
@@ -27,13 +35,19 @@
 			font-family: "微软雅黑", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "宋体";
 		}
 
-		#app {
+		.app {
 			margin: 75px;
 			font-size: 1.2em;
 		}
 
+		.app span {
+			position: absolute;
+			margin-top: 200px;
+			margin-left: -50px;
+		}
+
 		textarea {
-			margin: 10px;
+			margin-right: 50px;
 		}
 	</style>
 </body>
