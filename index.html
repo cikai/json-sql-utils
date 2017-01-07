@@ -7,6 +7,10 @@
 <body>
 	<div id="app-header"></div>
 
+	<div class="music">
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=101136&auto=1&height=66"></iframe>
+	</div>
+
 	<div id="json" class="app">
 		<p>{{ json_message }}</p>
 		<textarea cols="75" rows="30" v-model="code" v-on:keyup="jsonFormatter" placeholder="压缩的JSON数据"></textarea>
@@ -35,8 +39,14 @@
 			font-family: "微软雅黑", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "宋体";
 		}
 
+		.music {
+			position: absolute;
+			right: 0;
+			top: 55px;
+		}
+
 		.app {
-			margin: 75px;
+			margin: 100px;
 			font-size: 1.2em;
 		}
 
