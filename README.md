@@ -1,5 +1,7 @@
 ### JS Utils - Javascript Utilities
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cikai/json-sql-utils.svg)](https://greenkeeper.io/)
+
 > [http://jsutils.cn](http://jsutils.cn)
 
 ### Build Setup
